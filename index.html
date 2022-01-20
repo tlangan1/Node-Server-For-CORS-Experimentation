@@ -10,50 +10,49 @@
       var xhr = new XMLHttpRequest();
       // Get XHR to work locally first
       // NOTICE THAT I HAD TO HARDCODE THE PORT HERE TO GET IT BACK TO THE Node.js SERVER
-      /*
       xhr.open("POST", "http://localhost:8081/XHR-EndPoint.html", true);
       xhr.onload = function () {
         // do something to response
         console.log("Tom: " + this.responseText);
       };
       xhr.send("user=person&pwd=password&organization=place&requiredkey=key");
-      */
 
       // End of "Get XHR to work locally first" test
 
       // Get XHR to work with EMMA
+      //   var accountID = "1740925";
+      //   var publicAPIKey = "7b864d7be352988c8be3";
+      //   var privateAPIKey = "6f0a6f15b0b007cc458e";
 
-      // Account ID              1740925
-      // Public API key 7b864d7be352988c8be3
-      // Private API key 6f0a6f15b0b007cc458e
-      var accountID = "1740925";
-      var publicAPIKey = "7b864d7be352988c8be3";
-      var privateAPIKey = "6f0a6f15b0b007cc458e";
+      //   // $url = "https://api.e2ma.net/".$account_id."/members/add";
+      //   xhr.open(
+      //     "POST",
+      //     "https://api.e2ma.net/" + accountID + "/members/add",
+      //     true
+      //   );
 
-      // $url = "https://api.e2ma.net/".$account_id."/members/add";
-      xhr.open(
-        "POST",
-        "https://api.e2ma.net/" + accountID + "/members/add",
-        true
-      );
+      //   const params = {
+      //     username: publicAPIKey,
+      //     password: privateAPIKey,
+      //     email: "tom.langan@comcast.net",
+      //   };
 
-      const params = {
-        username: publicAPIKey,
-        password: privateAPIKey,
-        email: "tom.langan@comcast.net",
-      };
-
-      xhr.onload = function () {
-        // do something to response
-        console.log(
-          "Tom, this is the data that was returned from the XHR request: " +
-            this.responseText
-        );
-      };
-      //xhr.send("user=person&pwd=password&organization=place&requiredkey=key");
-      xhr.send(JSON.stringify(params));
+      //   xhr.onload = function () {
+      //     // do something to response
+      //     console.log(
+      //       "Tom, this is the data that was returned from the XHR request: " +
+      //         this.responseText
+      //     );
+      //   };
+      //   //xhr.send("user=person&pwd=password&organization=place&requiredkey=key");
+      //   xhr.send(JSON.stringify(params));
       // End of "Get XHR to work with EMMA" test
     </script>
   </head>
-  <body></body>
+  <body>
+    <img
+      src="//images.contentful.com/piwi0eufbb2g/5CEGEZYHctBkcjdc3AYdy4/37908b5e7917c3fab47a0080ef661638/image.png"
+      alt="image"
+    />
+  </body>
 </html>

@@ -15,11 +15,12 @@ var url = require("url");
 http
   .createServer(function (request, response) {
     // Print the name of the file for which request is made.
+
     console.log("Request for " + request.url + " received.");
 
     // Read the requested file content from file system
 
-    fs.readFile(request.url.substr(1), function (err, data) {
+    fs.readFile(request.url.substring(1), function (err, data) {
       if (err) {
         console.log(err);
 
@@ -37,16 +38,13 @@ http
 
         if (request.url == "/XHR-EndPoint.html") {
           response.writeHead(200, {
-            "Access-Control-Allow-Origin": "http://www.localhost:8081",
-            "Access-Control-Allow-Methods": "Post",
-            "Access-Control-Allow-Headrs": "text/html",
+            // "Access-Control-Allow-Origin": "http://www.localhost:8081",
+            // "Access-Control-Allow-Methods": "Post",
+            // "Access-Control-Allow-Headrs": "text/html",
           });
         } else {
           response.writeHead(200, {
             "Content-Type": "text/html",
-            // "Access-Control-Allow-Origin": "http://www.localhost:8081",
-            // "Access-Control-Allow-Methods": "Post",
-            // "Access-Control-Allow-Headrs": "text/html",
           });
         }
 
